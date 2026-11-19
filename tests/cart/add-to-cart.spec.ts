@@ -2,7 +2,7 @@ import { test, expect } from '../../src/fixtures/test';
 import { PRODUCTS } from '../../src/data/products';
 
 test.describe('Cart', () => {
-  test('add a single product to the cart', { tag: ['@DEMO-TC-3', '@smoke'] }, async ({ loggedIn, cartPage }) => {
+  test('add a single product to the cart', { tag: ['@DEMOTC-3', '@smoke'] }, async ({ loggedIn, cartPage }) => {
     await loggedIn.addToCart(PRODUCTS.backpack);
     expect(await loggedIn.cartCount()).toBe(1);
 

@@ -14,7 +14,7 @@ npx playwright install chromium
 ```
 npm test                                   # all tests
 npm run test:smoke                         # @smoke tests only
-npx playwright test --grep "@DEMO-TC-1"    # one test case by its SDET360 ID
+npx playwright test --grep "@DEMOTC-1"    # one test case by its SDET360 ID
 npm run test:headed                        # watch the browser
 npm run report                             # open the last HTML report
 ```
@@ -39,14 +39,14 @@ tests/
 - Locate elements with `page.getByTestId(...)` (mapped to the app's `data-test` attribute).
 - New pages extend `BasePage`, set `path`, define locators in the constructor, and get a fixture in `src/fixtures/test.ts`.
 - Test data goes in `src/data`. Do not hard-code users, products or customer details in tests.
-- **Every test is tagged with its SDET360 test case ID**, e.g. `{ tag: ['@DEMO-TC-1', '@smoke'] }`. Add `@smoke` for critical-path tests.
+- **Every test is tagged with its SDET360 test case ID**, e.g. `{ tag: ['@DEMOTC-1', '@smoke'] }`. Add `@smoke` for critical-path tests.
 
 ## Coverage
 
 | SDET360 ID | Test | File |
 |---|---|---|
-| DEMO-TC-1 | Standard user can log in | `tests/login/login.spec.ts` |
-| DEMO-TC-2 | Login fails with an invalid password | `tests/login/login.spec.ts` |
-| DEMO-TC-3 | Add a single product to the cart | `tests/cart/add-to-cart.spec.ts` |
+| DEMOTC-1 | Standard user can log in | `tests/login/login.spec.ts` |
+| DEMOTC-2 | Login fails with an invalid password | `tests/login/login.spec.ts` |
+| DEMOTC-3 | Add a single product to the cart | `tests/cart/add-to-cart.spec.ts` |
 
 Not automated yet: checkout, removing items from the cart, product sorting, logout, locked-out user.
