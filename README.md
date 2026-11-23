@@ -48,5 +48,6 @@ tests/
 | DEMOTC-1 | Standard user can log in | `tests/login/login.spec.ts` |
 | DEMOTC-2 | Login fails with an invalid password | `tests/login/login.spec.ts` |
 | DEMOTC-3 | Add a single product to the cart | `tests/cart/add-to-cart.spec.ts` |
+| SDTC-8 | Cart badge count updates when adding multiple products | `tests/cart/cart-badge-count.spec.ts` |
 
 Not automated yet: checkout, removing items from the cart, product sorting, logout, locked-out user.
